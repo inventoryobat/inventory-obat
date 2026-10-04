@@ -2733,7 +2733,7 @@ a {
 }
 
 .monitoring-stok-page .search-wrapper input:focus {
-  border-color: #93c5fd;
+  border-color: #16a34a;
   background: #ffffff;
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.08);
 }
@@ -3191,7 +3191,7 @@ a {
 }
 
 .monitoring-minimum-search:focus-within {
-  border-color: #2563eb;
+  border-color: #16a34a;
 
   box-shadow:
     0 0 0 3px rgba(37, 99, 235, 0.1);
@@ -4352,6 +4352,9 @@ a {
 /* =========================================================
    6. SEARCH STANDARD
 ========================================================= */
+/* =========================================================
+   SEARCH WRAPPER GLOBAL
+========================================================= */
 
 .search-wrapper {
   position: relative;
@@ -4360,18 +4363,40 @@ a {
   margin: 0;
 }
 
+.search-wrapper > svg {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+
+  transform: translateY(-50%);
+
+  color: #94a3b8;
+
+  pointer-events: none;
+
+  z-index: 2;
+}
+
 .search-wrapper input {
   display: block;
+
   width: 100%;
   min-height: 40px;
 
   margin: 0;
-  padding: 10px 12px;
+
+  /*
+    Ruang kiri dibuat khusus untuk icon Search
+  */
+  padding: 10px 12px 10px 42px;
 
   border: 1px solid #d1d5db;
   border-radius: 10px;
 
   outline: none;
+
   background: #ffffff;
   color: #111827;
 
@@ -4385,11 +4410,54 @@ a {
     box-shadow 0.2s ease;
 }
 
-.search-wrapper input:focus {
-  border-color: #16a34a;
-  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1);
+.search-wrapper input::placeholder {
+  color: #94a3b8;
 }
 
+.search-wrapper input:focus {
+  border-color: #16a34a;
+
+  box-shadow:
+    0 0 0 3px rgba(22, 163, 74, 0.1);
+}
+
+
+/* =========================================================
+   OBAT KELUAR - SEARCH
+========================================================= */
+
+.obat-keluar-table-card .search-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 18px;
+}
+
+.obat-keluar-table-card .search-wrapper > svg {
+  position: absolute;
+
+  left: 13px;
+  top: 50%;
+
+  width: 18px;
+  height: 18px;
+
+  transform: translateY(-50%);
+
+  color: #94a3b8;
+
+  pointer-events: none;
+
+  z-index: 2;
+}
+
+.obat-keluar-table-card .search-wrapper input {
+  width: 100%;
+
+  padding: 10px 12px 10px 42px;
+
+  box-sizing: border-box;
+}
 
 /* Search Obat Masuk dengan icon */
 
@@ -4441,7 +4509,7 @@ a {
 
 .monitoring-stock-search:focus-within,
 .monitoring-minimum-search:focus-within {
-  border-color: #2563eb;
+  border-color: #16a34a;
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
@@ -4959,7 +5027,7 @@ a {
 
 .monitoring-expired-page
   .monitoring-stock-search:focus-within {
-  border-color: #2563eb;
+  border-color: #16a34a;
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
@@ -7044,7 +7112,7 @@ button.dashboard-stat-card.dashboard-stat-clickable:focus-visible {
 }
 
 .laporan-input:focus {
-  border-color: #2563eb;
+  border-color: #16a34a;
 
   box-shadow:
     0 0 0 3px rgba(37, 99, 235, 0.10);
